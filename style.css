@@ -1,0 +1,716 @@
+/* CSS Variables ตามธีมฤดูกาล พร้อมแสง Glowing Background */
+:root {
+  --bg-color: #0f172a;
+  --glow-1: #1e3a8a;
+  --glow-2: #3b82f6;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --text-main: #1e293b;
+  --text-sub: #475569;
+  --accent: #2563eb;
+  --btn-bg: rgba(255, 255, 255, 0.85);
+  --btn-hover: #ffffff;
+  --border: rgba(255, 255, 255, 0.6);
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="winter"] {
+  --bg-color: #eef2f6;
+  --glow-1: #c7d2fe;
+  --glow-2: #bae6fd;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --text-main: #1e293b;
+  --text-sub: #475569;
+  --accent: #3b82f6;
+  --border: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="spring"] {
+  --bg-color: #fdf2f8;
+  --glow-1: #fbcfe8;
+  --glow-2: #fef08a;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --text-main: #4c0519;
+  --text-sub: #831843;
+  --accent: #ec4899;
+  --border: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="summer"] {
+  --bg-color: #f0fdf4;
+  --glow-1: #bbf7d0;
+  --glow-2: #99f6e4;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --text-main: #064e3b;
+  --text-sub: #047857;
+  --accent: #10b981;
+  --border: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="autumn"] {
+  --bg-color: #fff7ed;
+  --glow-1: #fed7aa;
+  --glow-2: #fef08a;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --text-main: #451a03;
+  --text-sub: #78350f;
+  --accent: #f97316;
+  --border: rgba(255, 255, 255, 0.9);
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  /* เปลี่ยนฟอนต์หลักเป็น Mitr (ไทย) + Noto Sans KR (เกาหลี) + Plus Jakarta Sans (อังกฤษ) */
+  font-family: 'Mitr', 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Dynamic Glowing Background Effect */
+.bg-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--glow-1) 0%, var(--glow-2) 50%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.7;
+  animation: pulse 8s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+}
+
+/* Nav Bar */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.nav-title {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.controls select {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 8px;
+  backdrop-filter: blur(5px);
+  outline: none;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+/* Glassmorphism Card Container */
+.container {
+  width: 90%;
+  max-width: 580px;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 45px 35px;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px var(--shadow), inset 0 0 0 1px var(--border);
+  text-align: center;
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Season Badge Header */
+.season-badge {
+  display: inline-block;
+  align-self: center;
+  padding: 6px 18px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  margin-bottom: 25px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+/* Page View Visibility & Animations */
+.page-view {
+  display: none;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.page-view.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Story Page Styling */
+.quote-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.4;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.story-text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-main);
+  margin-bottom: 30px;
+  text-align: center;
+  white-space: pre-line;
+  font-weight: 300;
+}
+
+/* Buttons */
+.btn-next {
+  background: var(--text-main);
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.btn-next:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  background: var(--accent);
+}
+
+.btn-back {
+  background: transparent;
+  border: none;
+  color: var(--text-sub);
+  margin-top: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  opacity: 0.7;
+  font-family: inherit;
+}
+
+.btn-back:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Question Page Styling */
+.question-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-option {
+  background: var(--btn-bg);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 0.95rem;
+  cursor: pointer;
+  line-height: 1.5;
+  border-radius: 18px;
+  font-family: inherit;
+  font-weight: 300;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.btn-option:hover {
+  background: var(--btn-hover);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  font-weight: 400;
+}
+
+/* Result Card */
+.card-result {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 0 24px 24px 24px; /* ปรับ Padding ด้านบนเป็น 0 เพื่อให้รูปชิดขอบบนสุดของการ์ด */
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+  overflow: hidden; /* ซ่อนส่วนเกินเพื่อให้รูปโค้งไปตามมุมของการ์ด */
+}
+
+.card-result img {
+  width: calc(100% + 48px);    /* ขยายความกว้างให้ออกไปชนขอบซ้าย-ขวาของการ์ดพอดี (คำนวณจาก padding 24px * 2) */
+  margin: 0 -24px 20px -24px;  /* ดึงขอบซ้าย-ขวาให้ออกไปชิดขอบการ์ดสนิท */
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 20px;  /* ให้มุมบนโค้งรับกับขอบของการ์ด */
+  border-top-right-radius: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.card-quote {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+/* =========================================
+   COVER PAGE
+========================================= */
+
+.cover-page {
+  overflow: hidden;
+  min-height: 520px;
+  justify-content: center;
+  position: relative;
+}
+
+/* ซ่อน season badge บนหน้าแรก */
+.cover-page ~ * {
+  position: relative;
+}
+
+/* ฤดูกาลลอย */
+.season-float {
+  position: absolute;
+  font-size: 1.25rem;
+  opacity: 0.55;
+  pointer-events: none;
+  animation: seasonFloat 5s ease-in-out infinite;
+}
+
+.season-float.flower {
+  top: 13%;
+  left: 14%;
+  animation-delay: 0s;
+}
+
+.season-float.water {
+  top: 25%;
+  right: 13%;
+  animation-delay: 1.2s;
+}
+
+.season-float.leaf {
+  bottom: 22%;
+  left: 12%;
+  animation-delay: 2s;
+}
+
+.season-float.snow {
+  bottom: 16%;
+  right: 16%;
+  animation-delay: 3s;
+}
+
+@keyframes seasonFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(8deg);
+  }
+}
+
+
+/* โลกของนาฬิกา */
+
+.clock-world {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 0 auto 22px;
+}
+
+.clock-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(71, 85, 105, 0.12);
+}
+
+.ring-1 {
+  transform: rotate(20deg) scale(1.08);
+}
+
+.ring-2 {
+  transform: rotate(-25deg) scale(1.18);
+  border-style: dashed;
+  opacity: 0.5;
+}
+
+.clock-face {
+  position: absolute;
+  inset: 18px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.48);
+  border: 1px solid rgba(255,255,255,0.9);
+  box-shadow:
+    0 10px 30px rgba(51,65,85,0.08),
+    inset 0 0 20px rgba(255,255,255,0.8);
+  backdrop-filter: blur(8px);
+}
+
+.clock-number {
+  position: absolute;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.55rem;
+  color: var(--text-sub);
+  opacity: 0.65;
+}
+
+.n12 {
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.n3 {
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.n6 {
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.n9 {
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.clock-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom center;
+  border-radius: 10px;
+}
+
+.hour-hand {
+  width: 2px;
+  height: 28px;
+  background: var(--text-main);
+  transform: translateX(-50%) rotate(135deg);
+}
+
+.minute-hand {
+  width: 1px;
+  height: 36px;
+  background: var(--accent);
+  transform: translateX(-50%) rotate(35deg);
+}
+
+.clock-center {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ตัวหนังสือปก */
+
+.cover-small-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  color: var(--accent);
+  opacity: 0.75;
+  margin-bottom: 9px;
+}
+
+.cover-title {
+  font-size: 1.9rem;
+  line-height: 1.45;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.cover-title span {
+  font-weight: 300;
+}
+
+.cover-subtitle {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--text-sub);
+  margin: 15px 0 12px;
+  font-weight: 300;
+}
+
+.cover-divider {
+  color: var(--accent);
+  font-size: 0.8rem;
+  opacity: 0.55;
+  margin-bottom: 15px;
+}
+
+
+/* ปุ่มเริ่ม */
+
+.cover-start-btn {
+  border: none;
+  background: var(--text-main);
+  color: white;
+  padding: 13px 23px;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-width: 170px;
+  box-shadow: 0 7px 20px rgba(30,41,59,0.12);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.cover-start-btn b {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.cover-start-btn:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  box-shadow: 0 10px 25px rgba(30,41,59,0.16);
+}
+
+.cover-note {
+  margin-top: 15px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 1.2px;
+  color: var(--text-sub);
+  opacity: 0.5;
+}
+
+
+/* =========================================
+   WARNING PAGE
+========================================= */
+
+.warning-page {
+  min-height: 520px;
+  justify-content: center;
+}
+
+.warning-symbol {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 13px;
+  border-radius: 50%;
+  border: 1px solid rgba(71,85,105,0.16);
+  background: rgba(255,255,255,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.warning-label {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 2.5px;
+  color: var(--accent);
+  opacity: 0.75;
+  margin-bottom: 8px;
+}
+
+.warning-title {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.warning-intro {
+  margin: 13px 0 23px;
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: var(--text-sub);
+  font-weight: 300;
+}
+
+
+/* รายการคำเตือน */
+
+.warning-list {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.warning-item {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+  padding: 12px 13px;
+  background: rgba(255,255,255,0.42);
+  border: 1px solid rgba(255,255,255,0.72);
+  border-radius: 15px;
+}
+
+.warning-number {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.62rem;
+  color: var(--accent);
+  opacity: 0.8;
+  padding-top: 2px;
+}
+
+.warning-item strong {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+
+.warning-item p {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.65;
+  color: var(--text-sub);
+  font-weight: 300;
+}
+
+.warning-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.warning-start {
+  min-width: 175px;
+}
+
+.warning-bottom .btn-back {
+  margin-top: 13px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .cover-page,
+  .warning-page {
+    min-height: 500px;
+  }
+
+  .clock-world {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 18px;
+  }
+
+  .cover-title {
+    font-size: 1.65rem;
+  }
+
+  .cover-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .season-float {
+    font-size: 1rem;
+  }
+
+  .warning-title {
+    font-size: 1.3rem;
+  }
+
+  .warning-intro {
+    font-size: 0.78rem;
+  }
+
+  .warning-item {
+    padding: 10px 11px;
+  }
+
+  .warning-item p {
+    font-size: 0.68rem;
+  }
+}
