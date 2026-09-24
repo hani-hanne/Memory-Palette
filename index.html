@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>โลกของเวลาและสีสันของฤดูกาล</title>
+  <title>Memory Palette</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Itim&family=M+PLUS+Rounded+1c:wght@400;700&family=Mali:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="winter">
 
@@ -17,13 +17,13 @@
 
   <!-- Top Navigation -->
   <div class="nav-bar">
-    <div class="nav-title">✨ 시계의 세계와 계절의 색</div>
+    <div class="nav-title" id="navTitle">✨ Memory Palette</div>
     <div class="controls">
       <select id="themeSelect" onchange="changeTheme(this.value)">
-        <option value="winter">❄️ Winter (ฤดูหนาว)</option>
-        <option value="spring">🌸 Spring (ฤดูใบไม้ผลิ)</option>
-        <option value="summer">🌿 Summer (ฤดูร้อน)</option>
-        <option value="autumn">🍁 Autumn (ฤดูใบไม้ร่วง)</option>
+        <option value="winter">❄️ Winter</option>
+        <option value="spring">🌸 Spring </option>
+        <option value="summer">🌿 Summer</option>
+        <option value="autumn">🍁 Autumn</option>
       </select>
       <select id="langSelect" onchange="changeLang(this.value)">
         <option value="th">ไทย</option>
@@ -35,183 +35,200 @@
   </div>
 
   <!-- Main Container -->
-    <main class="container">
-       <!-- ==============================
-            1. COVER PAGE
-        ================================ -->
-        <div id="page-cover" class="page-view active cover-page">
+  <main class="container">
+    
+    <!-- ==============================
+         1. COVER PAGE
+    ================================ -->
+    <div id="page-cover" class="page-view active cover-page">
+      <!-- ฤดูกาลลอยรอบ ๆ -->
+      <div class="season-float flower">🌸</div>
+      <div class="season-float water">💧</div>
+      <div class="season-float leaf">🍂</div>
+      <div class="season-float snow">❄️</div>
 
-        <!-- ฤดูกาลลอยรอบ ๆ -->
-        <div class="season-float flower">🌸</div>
-        <div class="season-float water">💧</div>
-        <div class="season-float leaf">🍂</div>
-        <div class="season-float snow">❄️</div>
-
-        <!-- นาฬิกากลาง -->
-        <div class="clock-world">
-            <div class="clock-ring ring-1"></div>
-            <div class="clock-ring ring-2"></div>
-
-            <div class="clock-face">
-            <span class="clock-number n12">12</span>
-            <span class="clock-number n3">3</span>
-            <span class="clock-number n6">6</span>
-            <span class="clock-number n9">9</span>
-
-            <div class="clock-hand hour-hand"></div>
-            <div class="clock-hand minute-hand"></div>
-            <div class="clock-center"></div>
-            </div>
+      <!-- นาฬิกากลาง -->
+      <div class="clock-world">
+        <div class="clock-ring ring-1"></div>
+        <div class="clock-ring ring-2"></div>
+        <div class="clock-face">
+          <span class="clock-number n12">12</span>
+          <span class="clock-number n3">3</span>
+          <span class="clock-number n6">6</span>
+          <span class="clock-number n9">9</span>
+          <div class="clock-hand hour-hand"></div>
+          <div class="clock-hand minute-hand"></div>
+          <div class="clock-center"></div>
         </div>
+      </div>
 
-        <div class="cover-small-title">
-            THE WORLD OF TIME
-        </div>
+      <div class="cover-small-title" id="coverSmallTitle">
+        The World of Time and Colors of Seasons
+      </div>
 
-        <h1 class="cover-title">
-            โลกของเวลา<br>
-            <span>และสีสันของฤดูกาล</span>
-        </h1>
+      <h1 class="cover-title" id="coverTitle">
+        จานสี<br>
+        <span>แห่งความทรงจำ</span>
+      </h1>
 
-        <p class="cover-subtitle">
-            บางความรู้สึกไม่ได้หายไป<br>
-            เพียงเพราะเวลาเดินต่อ
-        </p>
+      <p class="cover-subtitle" id="coverSubtitle">
+        บางความรู้สึกไม่ได้หายไป<br>
+        เพียงเพราะเวลาเดินต่อ
+      </p>
 
-        <div class="cover-divider">✦</div>
+      <div class="cover-divider">✦</div>
 
-        <button class="cover-start-btn"
-                onclick="showPage('page-warning')">
-            <span>เข้าสู่เรื่องราว</span>
-            <b>→</b>
+      <button class="cover-start-btn" onclick="showPage('page-about-book')">
+        <span id="coverStartBtn">เข้าสู่เรื่องราว</span>
+        <b>→</b>
+      </button>
+
+      <p class="cover-note" id="coverNote">
+        <img class="littlemluelogo" src="img/icon.png" width="10%" height="cover">
+        <br>
+        แรงบัดาลใจ : หนังสือ "시계의 세계와 계절의 색 โลกของนาฬิกาและสีของฤดู"
+      </p>
+    </div>
+
+
+    <!-- ==============================
+         2. ABOUT BOOK PAGE (แยกหน้ารายละเอียดหนังสือออกมาไม่ให้รก)
+    ================================ -->
+    <div id="page-about-book" class="page-view warning-page">
+      <div class="warning-label" id="aboutBookLabel">
+        ABOUT THE BOOK
+      </div>
+
+      <h2 class="warning-title" id="aboutBookTitle">
+        แรงบันดาลใจจากหนังสือ
+      </h2>
+      
+      <p class="warning-intro" id="aboutBookDesc" style="margin-bottom: 20px;">
+        เรื่องราวต่อไปนี้ได้รับแรงบันดาลใจมาจากหนังสือของคุณโมนา หรือ Mona Jung 
+        ชื่อหนังสือ <strong style="color: var(--accent);">"시계의 세계와 계절의 색 โลกของนาฬิกาและสีของฤดู"</strong> 
+        เป็นหนังสือสองภาษาไทยและเกาหลีที่จัดทำขึ้นจำนวนจำกัด สามารถสั่งซื้อได้ที่
+      </p>
+
+      <div style="margin-bottom: 25px;">
+        <a href="https://littlemlue.com/index.html" target="_blank">
+          <img src="img/icon.png" width="15%" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        </a>
+        <div style="margin-top: 8px; font-size: 0.85rem; font-weight: 500; color: var(--accent);">Littlemlue</div>
+      </div>
+
+      <div class="warning-bottom">
+        <button class="cover-start-btn warning-start" onclick="showPage('page-warning')">
+          <span id="aboutBookNextBtn">ถัดไป</span>
+          <b>→</b>
         </button>
 
-        <p class="cover-note">
-            A little journey through time & seasons
-        </p>
-
-        </div>
-
-
-        <!-- ==============================
-            2. WARNING PAGE
-        ================================ -->
-        <div id="page-warning" class="page-view warning-page">
-
-        <div class="warning-symbol">
-            <span>✦</span>
-        </div>
-
-        <div class="warning-label">
-            BEFORE YOU BEGIN
-        </div>
-
-        <h2 class="warning-title">
-            ก่อนที่คุณจะเดินทาง
-        </h2>
-
-        <p class="warning-intro">
-            เรื่องราวต่อจากนี้อาจพาคุณ<br>
-            กลับไปพบกับบางความรู้สึกที่เคยเก็บไว้
-        </p>
-
-        <div class="warning-list">
-
-            <div class="warning-item">
-            <div class="warning-number">01</div>
-            <div>
-                <strong>ความทรงจำ</strong>
-                <p>
-                บางคำถามอาจทำให้นึกถึงเหตุการณ์
-                ผู้คน หรือช่วงเวลาบางอย่างในอดีต
-                </p>
-            </div>
-            </div>
-
-            <div class="warning-item">
-            <div class="warning-number">02</div>
-            <div>
-                <strong>ความรู้สึก</strong>
-                <p>
-                ไม่มีคำตอบที่ถูกหรือผิด
-                เลือกสิ่งที่ตรงกับความรู้สึกของคุณที่สุด
-                </p>
-            </div>
-            </div>
-
-            <div class="warning-item">
-            <div class="warning-number">03</div>
-            <div>
-                <strong>ใช้เวลาของคุณ</strong>
-                <p>
-                ไม่จำเป็นต้องรีบตอบ
-                ค่อย ๆ อ่าน และปล่อยให้เรื่องราวพาคุณไป
-                </p>
-            </div>
-            </div>
-
-        </div>
-
-        <div class="warning-bottom">
-            <button class="cover-start-btn warning-start"
-                    onclick="startTest()">
-            <span>ฉันพร้อมแล้ว</span>
-            <b>→</b>
-            </button>
-
-            <button class="btn-back"
-                    onclick="showPage('page-cover')">
-            ← กลับไปหน้าแรก
-            </button>
-        </div>
-
-        </div>
-        
-        
-        <!-- 3. หน้าแสดงเนื้อเรื่อง (Story Page) -->
-        <div id="storyPage" class="page-view">
-        <!-- เพิ่มบรรทัดนี้เพื่อให้ JavaScript อัปเดตชื่อฤดูกาลได้ -->
-        <div class="season-badge" id="seasonTitle">บทนำ: โลกของเวลา</div>
-        
-        <div class="quote-icon">“</div>
-        <div class="story-text" id="storyText"></div>
-        <button class="btn-next" onclick="goToQuestion()">
-            <span>อ่านคำถาม</span> →
+        <button class="btn-back" onclick="showPage('page-cover')" id="aboutBookBackBtn">
+          ← กลับไปหน้าแรก
         </button>
+      </div>
+    </div>
+
+
+    <!-- ==============================
+         3. WARNING PAGE
+    ================================ -->
+    <div id="page-warning" class="page-view warning-page">
+
+      <div class="warning-label" id="warningLabel">
+        BEFORE YOU BEGIN
+      </div>
+
+      <h2 class="warning-title" id="warningTitle">
+        ก่อนที่คุณจะเดินทาง
+      </h2>
+      
+      <p class="warning-intro" id="warningIntro">
+        เรื่องราวต่อจากนี้อาจพาคุณ<br>
+        กลับไปพบกับบางความรู้สึกที่เคยเก็บไว้
+      </p>
+      
+      <div class="warning-list">
+        <div class="warning-item">
+          <div class="warning-number">o</div>
+          <div>
+            <strong id="warn1Title">ความทรงจำ</strong>
+            <p id="warn1Desc">บางคำถามอาจทำให้นึกถึงเหตุการณ์ ผู้คน หรือช่วงเวลาบางอย่างในอดีต</p>
+          </div>
         </div>
 
-        <!-- 4. หน้าแสดงคำถามและตัวเลือก (Question Page - ของเดิม) -->
-        <div id="questionPage" class="page-view">
-        <div class="question-text" id="questionText"></div>
-        <div class="btn-group" id="btnGroup"></div>
-        <button class="btn-back" onclick="backToStory()">
-            ← อ่านเนื้อเรื่องอีกครั้ง
+        <div class="warning-item">
+          <div class="warning-number">o</div>
+          <div>
+            <strong id="warn2Title">ความรู้สึก</strong>
+            <p id="warn2Desc">ไม่มีคำตอบที่ถูกหรือผิด เลือกสิ่งที่ตรงกับความรู้สึกของคุณที่สุด</p>
+          </div>
+        </div>
+
+        <div class="warning-item">
+          <div class="warning-number">o</div>
+          <div>
+            <strong id="warn3Title">ใช้เวลาของคุณ</strong>
+            <p id="warn3Desc">ไม่จำเป็นต้องรีบตอบ ค่อย ๆ อ่าน และปล่อยให้เรื่องราวพาคุณไป</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="warning-bottom">
+        <button class="cover-start-btn warning-start" onclick="startTest()">
+          <span id="warningBtnText">ฉันพร้อมแล้ว</span>
+          <b>→</b>
         </button>
-        </div>
 
-        <!-- 5. หน้าสรุปผลการ์ด (Result Page) -->
-        <div id="resultPage" class="page-view">
-        <!-- ลบกล่อง Result Card เก่าออก แล้วปล่อยให้ script.js เป็นคนเติมข้อมูลทั้งหมดให้ -->
-        <div class="card-result" id="cardResult"></div>
-        
-        <button class="btn-next" style="margin-top: 20px;" onclick="showPage('page-credits')">
-            ดูเครดิตผู้จัดทำ ✨
+        <button class="btn-back" onclick="showPage('page-about-book')" id="warningBackBtn">
+          ← กลับหน้าแนะนำหนังสือ
         </button>
-        </div>
+      </div>
+    </div>
+    
+    
+    <!-- 4. หน้าแสดงเนื้อเรื่อง (Story Page) -->
+    <div id="storyPage" class="page-view">
+      <div class="season-badge" id="seasonTitle">บทนำ: โลกของเวลา</div>
+      <div class="quote-icon">“</div>
+      <div class="story-text" id="storyText"></div>
+      <button class="btn-next" onclick="goToQuestion()">
+        <span id="readQuestionText">อ่านคำถาม</span> →
+      </button>
+    </div>
 
-        <!-- 6. หน้า End Credits -->
-        <div id="page-credits" class="page-view">
-        <div style="font-size: 2.5rem; margin-bottom: 10px;">🎬</div>
-        <h2 style="letter-spacing: 2px; margin-bottom: 20px; color: var(--text-main);">CREDITS</h2>
-        <div style="margin-bottom: 25px; line-height: 1.8; font-size: 0.9rem; color: var(--text-sub);">
-            <p style="color: var(--accent); margin: 0; font-weight: 500;">CREATED BY</p>
-            <p style="margin: 0 0 10px 0;">Niratcha / Studio</p>
-            <p style="color: var(--accent); margin: 0; font-weight: 500;">SPECIAL THANKS</p>
-            <p style="margin: 0;">ผู้เล่นทุกคนที่ร่วมเล่นแบบทดสอบ ✨</p>
-        </div>
-        <button class="btn-next" onclick="restartTest()">กลับไปหน้าแรก</button>
-        </div>
-    </main>
+    <!-- 5. หน้าแสดงคำถามและตัวเลือก (Question Page) -->
+    <div id="questionPage" class="page-view">
+      <div class="question-text" id="questionText"></div>
+      <div class="btn-group" id="btnGroup"></div>
+      <button class="btn-back" onclick="backToStory()" id="backToStoryText">
+        ← อ่านเนื้อเรื่องอีกครั้ง
+      </button>
+    </div>
+
+    <!-- 6. หน้าสรุปผลการ์ด (Result Page) -->
+    <div id="resultPage" class="page-view">
+      <div class="card-result" id="cardResult"></div>
+      <button class="btn-next" style="margin-top: 20px;" onclick="showPage('page-credits')" id="creditsBtnText">
+        ดูเครดิตผู้จัดทำ ✨
+      </button>
+    </div>
+
+    <!-- 7. หน้า End Credits -->
+    <div id="page-credits" class="page-view">
+      <div style="font-size: 2.5rem; margin-bottom: 10px;">🎬</div>
+      <h2 style="letter-spacing: 2px; margin-bottom: 20px; color: var(--text-main);">CREDITS</h2>
+      <div style="margin-bottom: 25px; line-height: 1.8; font-size: 0.9rem; color: var(--text-sub);">
+        <p style="color: var(--accent); margin: 0; font-weight: 500;">PROJECT NAME</p>
+        <p style="margin: 0 0 10px 0;">Memory Palette</p>
+        <p style="color: var(--accent); margin: 0; font-weight: 500;">CREATED BY</p>
+        <p style="margin: 0 0 10px 0;">Niratcha / Studio</p>
+        <p style="color: var(--accent); margin: 0; font-weight: 500;">SPECIAL THANKS</p>
+        <p style="margin: 0;" id="specialThanksText">ผู้เล่นทุกคนที่ร่วมเล่นแบบทดสอบ ✨</p>
+      </div>
+      <button class="btn-next" onclick="restartTest()" id="restartBtnText">กลับไปหน้าแรก</button>
+    </div>
+
+  </main>
 
   <script src="script.js"></script>
 </body>

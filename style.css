@@ -1,3 +1,19 @@
+/* กำหนดฟอนต์หลักตามภาษาที่เลือก */
+body[lang="th"], :root {
+  font-family: 'Mali', 'Itim', sans-serif;
+}
+
+body[lang="en"] {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body[lang="ko"] {
+  font-family: 'Gowun Dodum', sans-serif;
+}
+
+body[lang="ja"] {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
 /* CSS Variables ตามธีมฤดูกาล พร้อมแสง Glowing Background */
 :root {
   --bg-color: #0f172a;
@@ -67,8 +83,6 @@ body {
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-main);
-  /* เปลี่ยนฟอนต์หลักเป็น Mitr (ไทย) + Noto Sans KR (เกาหลี) + Plus Jakarta Sans (อังกฤษ) */
-  font-family: 'Mitr', 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -283,19 +297,19 @@ body {
 .card-result {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
-  padding: 0 24px 24px 24px; /* ปรับ Padding ด้านบนเป็น 0 เพื่อให้รูปชิดขอบบนสุดของการ์ด */
+  padding: 0 24px 24px 24px;
   border: 1px solid var(--border);
   box-shadow: 0 10px 25px rgba(0,0,0,0.04);
-  overflow: hidden; /* ซ่อนส่วนเกินเพื่อให้รูปโค้งไปตามมุมของการ์ด */
+  overflow: hidden;
 }
 
 .card-result img {
-  width: calc(100% + 48px);    /* ขยายความกว้างให้ออกไปชนขอบซ้าย-ขวาของการ์ดพอดี (คำนวณจาก padding 24px * 2) */
-  margin: 0 -24px 20px -24px;  /* ดึงขอบซ้าย-ขวาให้ออกไปชิดขอบการ์ดสนิท */
+  width: calc(100% + 48px);
+  margin: 0 -24px 20px -24px;
   height: 500px;
   object-fit: cover;
   display: block;
-  border-top-left-radius: 20px;  /* ให้มุมบนโค้งรับกับขอบของการ์ด */
+  border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
@@ -316,7 +330,6 @@ body {
 /* =========================================
    COVER PAGE
 ========================================= */
-
 .cover-page {
   overflow: hidden;
   min-height: 520px;
@@ -324,12 +337,6 @@ body {
   position: relative;
 }
 
-/* ซ่อน season badge บนหน้าแรก */
-.cover-page ~ * {
-  position: relative;
-}
-
-/* ฤดูกาลลอย */
 .season-float {
   position: absolute;
   font-size: 1.25rem;
@@ -338,43 +345,17 @@ body {
   animation: seasonFloat 5s ease-in-out infinite;
 }
 
-.season-float.flower {
-  top: 13%;
-  left: 14%;
-  animation-delay: 0s;
-}
-
-.season-float.water {
-  top: 25%;
-  right: 13%;
-  animation-delay: 1.2s;
-}
-
-.season-float.leaf {
-  bottom: 22%;
-  left: 12%;
-  animation-delay: 2s;
-}
-
-.season-float.snow {
-  bottom: 16%;
-  right: 16%;
-  animation-delay: 3s;
-}
+.season-float.flower { top: 13%; left: 14%; animation-delay: 0s; }
+.season-float.water { top: 25%; right: 13%; animation-delay: 1.2s; }
+.season-float.leaf { bottom: 22%; left: 12%; animation-delay: 2s; }
+.season-float.snow { bottom: 16%; right: 16%; animation-delay: 3s; }
 
 @keyframes seasonFloat {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-9px) rotate(8deg);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-9px) rotate(8deg); }
 }
 
-
-/* โลกของนาฬิกา */
-
+/* Clock World */
 .clock-world {
   width: 150px;
   height: 150px;
@@ -389,15 +370,8 @@ body {
   border: 1px solid rgba(71, 85, 105, 0.12);
 }
 
-.ring-1 {
-  transform: rotate(20deg) scale(1.08);
-}
-
-.ring-2 {
-  transform: rotate(-25deg) scale(1.18);
-  border-style: dashed;
-  opacity: 0.5;
-}
+.ring-1 { transform: rotate(20deg) scale(1.08); }
+.ring-2 { transform: rotate(-25deg) scale(1.18); border-style: dashed; opacity: 0.5; }
 
 .clock-face {
   position: absolute;
@@ -405,9 +379,7 @@ body {
   border-radius: 50%;
   background: rgba(255,255,255,0.48);
   border: 1px solid rgba(255,255,255,0.9);
-  box-shadow:
-    0 10px 30px rgba(51,65,85,0.08),
-    inset 0 0 20px rgba(255,255,255,0.8);
+  box-shadow: 0 10px 30px rgba(51,65,85,0.08), inset 0 0 20px rgba(255,255,255,0.8);
   backdrop-filter: blur(8px);
 }
 
@@ -419,29 +391,10 @@ body {
   opacity: 0.65;
 }
 
-.n12 {
-  top: 7px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.n3 {
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.n6 {
-  bottom: 7px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.n9 {
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-}
+.n12 { top: 7px; left: 50%; transform: translateX(-50%); }
+.n3 { right: 8px; top: 50%; transform: translateY(-50%); }
+.n6 { bottom: 7px; left: 50%; transform: translateX(-50%); }
+.n9 { left: 8px; top: 50%; transform: translateY(-50%); }
 
 .clock-hand {
   position: absolute;
@@ -451,34 +404,11 @@ body {
   border-radius: 10px;
 }
 
-.hour-hand {
-  width: 2px;
-  height: 28px;
-  background: var(--text-main);
-  transform: translateX(-50%) rotate(135deg);
-}
+.hour-hand { width: 2px; height: 28px; background: var(--text-main); transform: translateX(-50%) rotate(135deg); }
+.minute-hand { width: 1px; height: 36px; background: var(--accent); transform: translateX(-50%) rotate(35deg); }
+.clock-center { position: absolute; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; left: 50%; top: 50%; transform: translate(-50%, -50%); }
 
-.minute-hand {
-  width: 1px;
-  height: 36px;
-  background: var(--accent);
-  transform: translateX(-50%) rotate(35deg);
-}
-
-.clock-center {
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  background: var(--accent);
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-/* ตัวหนังสือปก */
-
+/* Cover Texts */
 .cover-small-title {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.6rem;
@@ -497,9 +427,7 @@ body {
   color: var(--text-main);
 }
 
-.cover-title span {
-  font-weight: 300;
-}
+.cover-title span { font-weight: 300; }
 
 .cover-subtitle {
   font-size: 0.88rem;
@@ -516,9 +444,6 @@ body {
   margin-bottom: 15px;
 }
 
-
-/* ปุ่มเริ่ม */
-
 .cover-start-btn {
   border: none;
   background: var(--text-main);
@@ -534,23 +459,11 @@ body {
   gap: 18px;
   min-width: 170px;
   box-shadow: 0 7px 20px rgba(30,41,59,0.12);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
-.cover-start-btn b {
-  font-family: Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-.cover-start-btn:hover {
-  transform: translateY(-2px);
-  background: var(--accent);
-  box-shadow: 0 10px 25px rgba(30,41,59,0.16);
-}
+.cover-start-btn b { font-family: Arial, sans-serif; font-weight: 400; font-size: 1rem; }
+.cover-start-btn:hover { transform: translateY(-2px); background: var(--accent); box-shadow: 0 10px 25px rgba(30,41,59,0.16); }
 
 .cover-note {
   margin-top: 15px;
@@ -561,15 +474,10 @@ body {
   opacity: 0.5;
 }
 
-
 /* =========================================
    WARNING PAGE
 ========================================= */
-
-.warning-page {
-  min-height: 520px;
-  justify-content: center;
-}
+.warning-page { min-height: 520px; justify-content: center; }
 
 .warning-symbol {
   width: 46px;
@@ -594,23 +502,8 @@ body {
   margin-bottom: 8px;
 }
 
-.warning-title {
-  margin: 0;
-  font-size: 1.45rem;
-  font-weight: 500;
-  color: var(--text-main);
-}
-
-.warning-intro {
-  margin: 13px 0 23px;
-  font-size: 0.82rem;
-  line-height: 1.8;
-  color: var(--text-sub);
-  font-weight: 300;
-}
-
-
-/* รายการคำเตือน */
+.warning-title { margin: 0; font-size: 1.45rem; font-weight: 500; color: var(--text-main); }
+.warning-intro { margin: 13px 0 23px; font-size: 0.82rem; line-height: 1.8; color: var(--text-sub); font-weight: 300; }
 
 .warning-list {
   text-align: left;
@@ -638,79 +531,24 @@ body {
   padding-top: 2px;
 }
 
-.warning-item strong {
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--text-main);
-  margin-bottom: 2px;
-}
+.warning-item strong { display: block; font-size: 0.82rem; font-weight: 500; color: var(--text-main); margin-bottom: 2px; }
+.warning-item p { margin: 0; font-size: 0.72rem; line-height: 1.65; color: var(--text-sub); font-weight: 300; }
 
-.warning-item p {
-  margin: 0;
-  font-size: 0.72rem;
-  line-height: 1.65;
-  color: var(--text-sub);
-  font-weight: 300;
-}
-
-.warning-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.warning-start {
-  min-width: 175px;
-}
-
-.warning-bottom .btn-back {
-  margin-top: 13px;
-}
-
+.warning-bottom { display: flex; flex-direction: column; align-items: center; }
+.warning-start { min-width: 175px; }
+.warning-bottom .btn-back { margin-top: 13px; }
 
 /* =========================================
    MOBILE
 ========================================= */
-
 @media (max-width: 600px) {
-
-  .cover-page,
-  .warning-page {
-    min-height: 500px;
-  }
-
-  .clock-world {
-    width: 130px;
-    height: 130px;
-    margin-bottom: 18px;
-  }
-
-  .cover-title {
-    font-size: 1.65rem;
-  }
-
-  .cover-subtitle {
-    font-size: 0.8rem;
-  }
-
-  .season-float {
-    font-size: 1rem;
-  }
-
-  .warning-title {
-    font-size: 1.3rem;
-  }
-
-  .warning-intro {
-    font-size: 0.78rem;
-  }
-
-  .warning-item {
-    padding: 10px 11px;
-  }
-
-  .warning-item p {
-    font-size: 0.68rem;
-  }
+  .cover-page, .warning-page { min-height: 500px; }
+  .clock-world { width: 130px; height: 130px; margin-bottom: 18px; }
+  .cover-title { font-size: 1.65rem; }
+  .cover-subtitle { font-size: 0.8rem; }
+  .season-float { font-size: 1rem; }
+  .warning-title { font-size: 1.3rem; }
+  .warning-intro { font-size: 0.78rem; }
+  .warning-item { padding: 10px 11px; }
+  .warning-item p { font-size: 0.68rem; }
 }
