@@ -140,6 +140,7 @@ const coverTranslations = {
 const stepsData = [
   // STEP 1: Intro (Clock World)
   {
+    image: "img/01.png",
     season: { th: "บทนำ: โลกของเวลา", ko: "프롤로그: 시계의 세계", en: "Prologue: World of Time", ja: "プロローグ: 時間の世界" },
     story: {
       th: "ในโลกของเวลา... เข็มนาทีมองดูต้นไม้ด้วยความกังวล\nมันขอให้เข็มวินาทีหยุดหมุนด้วยหวังว่าจะยับยั้งความเปลี่ยนแปลง\nแต่เวลายังคงต้องหมุนต่อไป เพื่อให้ต้นไม้เติบโตผ่านฤดูกาล...",
@@ -162,6 +163,7 @@ const stepsData = [
   },
   // STEP 2: Spring
   {
+    image: "img/02.png",
     season: { th: "ฤดูใบไม้ผลิ: การพบกันและการจากลา", ko: "봄: 만남과 이별", en: "Spring: Encounter & Farewell", ja: "春: 出会いとお別れ" },
     story: {
       th: "ฤดูใบไม้ผลิมาถึงพร้อมกับความสุขของการมองดูสิ่งที่รักเติบโต\nเหมือนดอกไม้ผลิบาน ทว่ามันก็เตือนเราด้วยว่า ไม่มีสิ่งใดคงอยู่ตลอดไป\nและการจากลาจะทำให้เรามองเห็นสิ่งที่สำคัญชัดขึ้น...",
@@ -184,9 +186,10 @@ const stepsData = [
   },
   // STEP 3: Summer
   {
+    image: "img/03.png",
     season: { th: "ฤดูร้อน: แสงสว่าง ฝนโปรย และความจริง", ko: "여름: 빛, 여우비, 그리고 진실", en: "Summer: Sunlight, Sunshower & Truth", ja: "夏: 光、狐の嫁入り、そして真実" },
     story: {
-      th: "แดดฤดูร้อนส่องสว่าง เสียงเปียโนสีเทาดังขึ้นท่ามกลางบ้านที่ไร้ผู้คน\nทันใดนั้นฝนเล็ดเกร็ดแดด (여우비) ก็โปรยลงมา\nราวกับจะบอกเราว่า 'สิ่งที่จะเกิด ย่อมต้องเกิด... หากคิดแล้วหนักใจ ก็อย่าไปคิดมัน'...",
+      th: "แดดฤดูร้อนส่องสว่าง เสียงเปียโนสีเทาดังขึ้นท่ามกลางบ้านที่ไร้ผู้คน\nทันใดนั้นฝนเล็ดเกร็ดแดด ก็โปรยลงมา\nราวกับจะบอกเราว่า 'สิ่งที่จะเกิด ย่อมต้องเกิด... หากคิดแล้วหนักใจ ก็อย่าไปคิดมัน'...",
       ko: "뜨거운 여름 햇살 아래, 빈집에서 은은한 피아노 소리가 들려옵니다.\n이내 내리는 여우비는 우리에게 말해줍니다.\n'일어날 일은 일어난다... 마음을 갉아먹는 생각이라면 하지 마라'...",
       en: "Summer sun shines bright. A grey piano melody echoes in an empty home.\nSuddenly a sunshower falls, whispering:\n'What will happen will happen... if a thought weighs on your heart, let it go'...",
       ja: "夏の強い日差しの中、誰もいない家からピアノの音が聞こえます。\nやがて降る狐の嫁入りは教えてくれます。\n「起こることは起こる... 心をすり減らす考えなら、しなければいい」..."
@@ -206,6 +209,7 @@ const stepsData = [
   },
   // STEP 4: Autumn
   {
+    image: "img/04.png",
     season: { th: "ฤดูใบไม้ร่วง: หนังสือปกเทา และดาวกลางวัน", ko: "가을: 회색 책과 낮에 떠 있는 별", en: "Autumn: Grey Book & Day Stars", ja: "秋: 灰色の本と昼の星" },
     story: {
       th: "ใบไม้สีส้มทองร่วงโรย สมุดบันทึกที่ถูกเขียนด้วยหมึกปากกาไม่อาจแก้ไขได้\nทำได้เพียงมองย้อนกลับไปอ่าน ในยามกลางวันที่แสงแดดจ้า\nบางครั้งเราอาจลืมตระหนักไปว่า... มี 'ดาวสองดวง' คอยส่องสว่างเคียงข้างเราอยู่เสมอ...",
@@ -228,6 +232,7 @@ const stepsData = [
   },
   // STEP 5: Winter
   {
+    image: "img/05.png",
     season: { th: "ฤดูหนาว: หุ่นไล่กา และดาวที่เรียกว่าเรา", ko: "겨울: 허수아비와 '우리'라는 별", en: "Winter: Scarecrow & Star Called 'Us'", ja: "冬: かかしと「私」という星" },
     story: {
       th: "ฤดูหนาวอันหนาวเหน็บมาถึง หุ่นไล่กาเฝ้าคุ้มครองต้นอ่อนอย่างเงียบงัน\nความอบอุ่นในฤดูนี้ไม่ได้มาจากแดดจ้า แต่มาจากคนที่อยู่เคียงข้าง\nและในที่สุดเราก็เข้าใจว่า... แสงที่งดงามที่สุด คือแสงที่เปล่งออกมาจากภายในตัวเราเอง...",
@@ -253,61 +258,61 @@ const stepsData = [
 const cardsData = {
   c1: {
     img: "img-card/card1.jpg",
-    title: { th: "CARD 01: เข็มนาฬิกา", ko: "CARD 01: 시계 바늘", en: "CARD 01: Clock Hand", ja: "CARD 01: 時計の針" },
-    quote: { th: "“รอยยิ้มของใครบางคน อาจไม่ได้แปลว่ามีความสุขเสมอไป”", ko: "“누군가의 미소가 항상 행복만을 의미하지는 않는다”", en: "“Someone's smile doesn't always mean they are happy”", ja: "「誰かの笑顔が必ずしも幸せを意味するとは限らない」" },
-    desc: { th: "คุณเป็นคนที่ละเอียดอ่อน ลึกซึ้ง และแคร์ความรู้สึกของผู้คนรอบข้าง คุณเข้าใจดีว่าการจากลาเป็นส่วนหนึ่งของการเติบโต", ko: "당신은 섬세하고 깊은 마음을 가진 사람입니다. 이별 또한 성장의 일부임을 잘 이해하고 있습니다.", en: "You have a delicate and deep heart, understanding that farewells are a part of growing up.", ja: "あなたは繊細で深い心を持つ人です。別れも成長の一部であることをよく理解しています。" }
-  },
-  c2: {
-    img: "img-card/card2.jpg",
-    title: { th: "CARD 02: เปียโนสีเทา", ko: "CARD 02: 회색 피아노", en: "CARD 02: Grey Piano", ja: "CARD 02: 灰色のピアノ" },
-    quote: { th: "“อดีตถูกเขียนด้วยหมึกปากกา ไม่อาจลบเลื่อน มีเพียงการมองย้อนกลับไป”", ko: "“지울 수 없는 펜으로 적힌 과거, 그저 돌아볼 뿐이다”", en: "“Past written in pen cannot be erased, only reflected upon”", ja: "「消せないペンで書かれた過去、ただ振り返るだけ」" },
-    desc: { th: "คุณให้ความสำคัญกับบทเรียนและอดีต แม้จะแก้ไขไม่ได้ แต่ทุกหน้าที่ผ่านไปคือตัวตนที่ทำให้คุณงดงามในวันนี้", ko: "당신은 지난 경험을 귀중히 여깁니다. 수정할 수는 없지만 그 모든 페이지가 지금의 당신을 만들었습니다.", en: "You treasure past experiences. Unchangeable as they are, every page shaped who you are today.", ja: "あなたは過去の経験を大切にします。修正はできませんが、そのすべてのページが現在のあなたを作りました。" }
-  },
-  c3: {
-    img: "img-card/card3.jpg",
-    title: { th: "CARD 03: สมุดหมึกปากกา", ko: "CARD 03: 펜과 일기장", en: "CARD 03: Ink Pen Journal", ja: "CARD 03: インクペンとノート" },
-    quote: { th: "“สถานที่ยังคงเดิม แต่คนบางคนได้กลายเป็นความทรงจำไปแล้ว”", ko: "“장소는 그대로지만, 누군가는 추억이 되었다”", en: "“The place remains, but someone has turned into a memory”", ja: "「場所はそのままだが、誰かは思い出になった」" },
-    desc: { th: "คุณเป็นคนทุ่มเทให้ความรัก ผูกพันกับสถานที่และความทรงจำอันอบอุ่นที่เคยเกิดขึ้น", ko: "당신은 사랑에 진심이며, 따뜻했던 장소와 기억을 깊이 간직하는 사람입니다.", en: "You give your heart sincerely, holding deep affection for places and warm memories.", ja: "あなたは愛に真実であり、温かかった場所と記憶を深く大切にする人です。" }
-  },
-  c4: {
-    img: "img-card/card4.jpg",
-    title: { th: "CARD 04: ดวงดาวกลางวัน", ko: "CARD 04: 낮에 뜨는 별", en: "CARD 04: Day Star", ja: "CARD 04: 昼の星" },
-    quote: { th: "“อะไรจะเกิดก็ต้องเกิด... หากคิดแล้วหนักใจ ก็แค่อย่าไปคิดมัน”", ko: "“일어날 일은 일어난다... 마음이 힘들다면 생각하지 마라”", en: "“What will happen will happen... if it weighs on you, don't overthink”", ja: "「起こることは起こる... 心が重いなら考えないことだ」" },
-    desc: { th: "คุณมีจิตใจที่รู้จักปล่อยวาง ยอมรับความไม่แน่นอนของชีวิตด้วยความสงบและความเข้าใจ", ko: "당신은 내려놓을 줄 아는 마음을 가졌으며, 삶의 불확실성을 의연하게 받아들입니다.", en: "You possess a graceful mindset of letting go, accepting life's uncertainties calmly.", ja: "あなたは手放す心を持っており、人生の不確実性を穏やかに受け入れます。" }
-  },
-  c5: {
-    img: "img-card/card5.jpg",
-    title: { th: "CARD 05: ต้นไม้ผลัดใบ", ko: "CARD 05: 낙엽이 지는 나무", en: "CARD 05: Shedding Tree", ja: "CARD 05: 落葉する木" },
-    quote: { th: "“ความรักและการปกป้องที่เงียบงัน ไม่จำเป็นต้องเอื้อนเอ่ยคำใด”", ko: "“침묵 속의 사랑과 보호는 말로 표현될 필요가 없다”", en: "“Silent love and protection need no words”", ja: "「沈黙の中の愛と保護は言葉で表現される必要はない」" },
-    desc: { th: "คุณเป็นผู้ให้อย่างแท้จริง คอยดูแลและสนับสนุนคนที่คุณรักอยู่หลังฉากอย่างเงียบๆ เสมอ", ko: "당신은 묵묵히 곁을 지키며 사랑하는 이들을 뒤에서 응원해주는 든든한 사람입니다.", en: "You are a quiet giver, always supporting and guarding your loved ones from behind.", ja: "あなたは静かに傍で見守り、愛する人々を陰から応援する頼もしい人です。" }
-  },
-  c6: {
-    img: "img-card/card6.jpg",
-    title: { th: "CARD 06: หุ่นไล่กาผู้เฝ้ามอง", ko: "CARD 06: 지켜보는 허수아비", en: "CARD 06: Watchful Scarecrow", ja: "CARD 06: 見守るかかし" },
-    quote: { th: "“หดหู่แต่อ่อนโยน อ้างว้างแต่อบอุ่น”", ko: "“쓸쓸하지만 다정하고, 외롭지만 따뜻하다”", en: "“Melancholy yet gentle, lonely yet warm”", ja: "「切ないが優しく、寂しいが温かい」" },
-    desc: { th: "คุณมีสุนทรียภาพในหัวใจ มองเห็นความงามแม้ในยามเศร้า และเปลี่ยนความอ้างว้างเป็นความอบอุ่นได้", ko: "당신은 슬픔 속에서도 아름다움을 발견하며, 외로움을 따스함으로 승화시키는 감성을 지녔습니다.", en: "You possess deep artistic sensitivity, finding beauty in sadness and warmth in solitude.", ja: "あなたは悲しみの中にも美しさを見出し、寂しさを温かさに昇華させる感性を持っています。" }
-  },
-  c7: {
-    img: "img-card/card7.jpg",
-    title: { th: "CARD 07: ฤดูใบไม้ผลิ", ko: "CARD 07: 봄", en: "CARD 07: Spring", ja: "CARD 07: 春" },
-    quote: { th: "“เพียงเพราะแสงแดดจ้า จึงลืมตระหนักว่ามีดาวคอยส่องสว่างอยู่ข้างๆ”", ko: "“햇살이 밝아 곁에서 빛나는 별을 잠시 잊었을 뿐”", en: "“Only because sun is bright did we forget stars shine beside us”", ja: "「日差しが眩しく、傍で輝く星を一時忘れていただけ」" },
-    desc: { th: "คุณเป็นคนที่ตระหนักถึงคุณค่าของคนใกล้ตัว และพร้อมจะแลกเปลี่ยนความหวังดีให้แก่กันเสมอ", ko: "당신은 소중한 사람들의 존재를 깨닫고 그 마음을 귀히 여길 줄 아는 따뜻한 사람입니다.", en: "You appreciate the presence of loved ones, holding close relationship as true treasures.", ja: "あなたは大切な人々の存在に気づき、その心を尊ぶことができる温かい人です。" }
-  },
-  c8: {
-    img: "img-card/card8.jpg",
-    title: { th: "CARD 08: ฤดูร้อน", ko: "CARD 08: 여름", en: "CARD 08: Summer", ja: "CARD 08: 夏" },
-    quote: { th: "“หากไม่ทิ้งใบเก่าในวันนี้ ไม่อาจเติบโตและอยู่รอดในฤดูถัดไป”", ko: "“오늘 옛 잎을 떨어뜨리지 않으면 다음 계절을 살아낼 수 없다”", en: "“Without shedding old leaves today, one cannot thrive next season”", ja: "「今日古い葉を落とさなければ、次の季節を生き抜くことはできない」" },
-    desc: { th: "คุณมีความเด็ดเดี่ยว กล้าที่จะละทิ้งสิ่งเดิมๆ เพื่อเปิดรับการเติบโตและการเริ่มต้นใหม่", ko: "당신은 용기 있게 과거를 내려놓고 새로운 성장을 향해 나아갈 줄 아는 결단력 있는 사람입니다.", en: "You possess courage to let go of old ways, stepping bravely toward new growth.", ja: "あなたは勇気を持って過去を手放し、新しい成長に向かって進む決断力のある人です。" }
-  },
-  c9: {
-    img: "img-card/card9.jpg",
-    title: { th: "CARD 09: ฤดูใบไม้ร่วง", ko: "CARD 09: 가을", en: "CARD 09: Autumn", ja: "CARD 09: 秋" },
+    title: { th: "เข็มนาฬิกา", ko: "시계 바늘", en: "Clock Hand", ja: "時計の針" },
     quote: { th: "“ต่างคนต่างมีหน้าที่และจังหวะของตัวเอง เพื่อให้เวลายังคงเดินต่อไป”", ko: "“각자의 속도와 역할이 있기에 시간은 흘러간다”", en: "“Each has their own rhythm so that time continues forward”", ja: "「それぞれの速度と役割があるからこそ、時間は流れていく」" },
     desc: { th: "คุณเคารพในจังหวะชีวิตของตนเองและผู้อื่น เดินหน้าด้วยความมั่นคงโดยไม่เปรียบเทียบใคร", ko: "당신은 자신과 타인의 삶의 속도를 존중하며, 흔들림 없이 자신만의 길을 걸어가는 사람입니다.", en: "You respect your own pace and that of others, walking your unique path steadily.", ja: "あなたは自分と他人の人生の速度を尊重し、ブレずに自分だけの道を歩む人です。" }
   },
+  c2: {
+    img: "img-card/card2.jpg",
+    title: { th: "เปียโนสีเทา", ko: "회색 피아노", en: "Grey Piano", ja: "灰色のピアノ" },
+    quote: { th: "“หดหู่แต่อ่อนโยน อ้างว้างแต่อบอุ่น”", ko: "“쓸쓸하지만 다정하고, 외롭지만 따뜻하다”", en: "“Melancholy yet gentle, lonely yet warm”", ja: "「切ないが優しく、寂しいが温かい」" },
+    desc: { th: "คุณมีสุนทรียภาพในหัวใจ มองเห็นความงามแม้ในยามเศร้า และเปลี่ยนความอ้างว้างเป็นความอบอุ่นได้", ko: "당신은 슬픔 속에서도 아름다움을 발견하며, 외로움을 따스함으로 승화시키는 감성을 지녔습니다.", en: "You possess deep artistic sensitivity, finding beauty in sadness and warmth in solitude.", ja: "あなたは悲しみの中にも美しさを見出し、寂しさを温かさに昇華させる感性を持っています。" }
+  },
+  c3: {
+    img: "img-card/card3.jpg",
+    title: { th: "สมุดหมึกปากกา", ko: "펜과 일기장", en: "Ink Pen Journal", ja: "インクペンとノート" },
+    quote: { th: "“อดีตถูกเขียนด้วยหมึกปากกา ไม่อาจลบเลื่อน มีเพียงการมองย้อนกลับไป”", ko: "“지울 수 없는 펜으로 적힌 과거, 그저 돌아볼 뿐이다”", en: "“Past written in pen cannot be erased, only reflected upon”", ja: "「消せないペンで書かれた過去、ただ振り返るだけ」" },
+    desc: { th: "คุณให้ความสำคัญกับบทเรียนและอดีต แม้จะแก้ไขไม่ได้ แต่ทุกหน้าที่ผ่านไปคือตัวตนที่ทำให้คุณงดงามในวันนี้", ko: "당신은 지난 경험을 귀중히 여깁니다. 수정할 수는 없지만 그 모든 페이지가 지금의 당신을 만들었습니다.", en: "You treasure past experiences. Unchangeable as they are, every page shaped who you are today.", ja: "あなたは過去の経験を大切にします。修正はできませんが、そのすべてのページが現在のあなたを作りました。" }
+  },
+  c4: {
+    img: "img-card/card4.jpg",
+    title: { th: "ดวงดาวกลางวัน", ko: "낮에 뜨는 별", en: "Day Star", ja: "昼の星" },
+    quote: { th: "“เพียงเพราะแสงแดดจ้า จึงลืมตระหนักว่ามีดาวคอยส่องสว่างอยู่ข้างๆ”", ko: "“햇살이 밝아 곁에서 빛나는 별을 잠시 잊었을 뿐”", en: "“Only because sun is bright did we forget stars shine beside us”", ja: "「日差しが眩しく、傍で輝く星を一時忘れていただけ」" },
+    desc: { th: "คุณเป็นคนที่ตระหนักถึงคุณค่าของคนใกล้ตัว และพร้อมจะแลกเปลี่ยนความหวังดีให้แก่กันเสมอ", ko: "당신은 소중한 사람들의 존재를 깨닫고 그 마음을 귀히 여길 줄 아는 따뜻한 사람입니다.", en: "You appreciate the presence of loved ones, holding close relationship as true treasures.", ja: "あなたは大切な人々の存在に気づき、その心を尊ぶことができる温かい人です。" }
+  },
+  c5: {
+    img: "img-card/card5.jpg",
+    title: { th: "ต้นไม้ผลัดใบ", ko: "낙엽이 지는 나무", en: "Shedding Tree", ja: "落葉する木" },
+    quote: { th: "“หากไม่ทิ้งใบเก่าในวันนี้ ไม่อาจเติบโตและอยู่รอดในฤดูถัดไป”", ko: "“오늘 옛 잎을 떨어뜨리지 않으면 다음 계절을 살아낼 수 없다”", en: "“Without shedding old leaves today, one cannot thrive next season”", ja: "「今日古い葉を落とさなければ、次の季節を生き抜くことはできない」" },
+    desc: { th: "คุณมีความเด็ดเดี่ยว กล้าที่จะละทิ้งสิ่งเดิมๆ เพื่อเปิดรับการเติบโตและการเริ่มต้นใหม่", ko: "당신은 용기 있게 과거를 내려놓고 새로운 성장을 향해 나아갈 줄 아는 결단력 있는 사람입니다.", en: "You possess courage to let go of old ways, stepping bravely toward new growth.", ja: "あなたは勇気を持って過去を手放し、新しい成長に向かって進む決断力のある人です。" }
+  },
+  c6: {
+    img: "img-card/card6.jpg",
+    title: { th: "หุ่นไล่กาผู้เฝ้ามอง", ko: "지켜보는 허수아비", en: "Watchful Scarecrow", ja: "見守るかかし" },
+    quote: { th: "“ความรักและการปกป้องที่เงียบงัน ไม่จำเป็นต้องเอื้อนเอ่ยคำใด”", ko: "“침묵 속의 사랑과 보호는 말로 표현될 필요가 없다”", en: "“Silent love and protection need no words”", ja: "「沈黙の中の愛と保護は言葉で表現される必要はない」" },
+    desc: { th: "คุณเป็นผู้ให้อย่างแท้จริง คอยดูแลและสนับสนุนคนที่คุณรักอยู่หลังฉากอย่างเงียบๆ เสมอ", ko: "당신은 묵묵히 곁을 지키며 사랑하는 이들을 뒤에서 응원해주는 든든한 사람입니다.", en: "You are a quiet giver, always supporting and guarding your loved ones from behind.", ja: "あなたは静かに傍で見守り、愛する人々を陰から応援する頼もしい人です。" }
+  },
+  c7: {
+    img: "img-card/card7.jpg",
+    title: { th: "ฤดูใบไม้ผลิ", ko: "봄", en: "Spring", ja: "春" },
+    quote: { th: "“รอยยิ้มของใครบางคน อาจไม่ได้แปลว่ามีความสุขเสมอไป”", ko: "“누군가의 미소가 항상 행복만을 의미하지는 않는다”", en: "“Someone's smile doesn't always mean they are happy”", ja: "「誰かの笑顔が必ずしも幸せを意味するとは限らない」" },
+    desc: { th: "คุณเป็นคนที่ละเอียดอ่อน ลึกซึ้ง และแคร์ความรู้สึกของผู้คนรอบข้าง คุณเข้าใจดีว่าการจากลาเป็นส่วนหนึ่งของการเติบโต", ko: "당신은 섬세하고 깊은 마음을 가진 사람입니다. 이별 또한 성장의 일부임을 잘 이해하고 있습니다.", en: "You have a delicate and deep heart, understanding that farewells are a part of growing up.", ja: "あなたは繊細で深い心を持つ人です。別れも成長の一部であることをよく理解しています。" }
+  },
+  c8: {
+    img: "img-card/card8.jpg",
+    title: { th: "ฤดูร้อน", ko: "여름", en: "Summer", ja: "夏" },
+    quote: { th: "“สถานที่ยังคงเดิม แต่คนบางคนได้กลายเป็นความทรงจำไปแล้ว”", ko: "“장소는 그대로지만, 누군가는 추억이 되었다”", en: "“The place remains, but someone has turned into a memory”", ja: "「場所はそのままだが、誰かは思い出になった」" },
+    desc: { th: "คุณเป็นคนทุ่มเทให้ความรัก ผูกพันกับสถานที่และความทรงจำอันอบอุ่นที่เคยเกิดขึ้น", ko: "당신은 사랑에 진심이며, 따뜻했던 장소와 기억을 깊이 간직하는 사람입니다.", en: "You give your heart sincerely, holding deep affection for places and warm memories.", ja: "あなたは愛に真実であり、温かかった場所と記憶を深く大切にする人です。" }
+  },
+  c9: {
+    img: "img-card/card9.jpg",
+    title: { th: "ฤดูใบไม้ร่วง", ko: "가을", en: "Autumn", ja: "秋" },
+    quote: { th: "“อะไรจะเกิดก็ต้องเกิด... หากคิดแล้วหนักใจ ก็แค่อย่าไปคิดมัน”", ko: "“일어날 일은 일어난다... 마음이 힘들다면 생각하지 마라”", en: "“What will happen will happen... if it weighs on you, don't overthink”", ja: "「起こることは起こる... 心が重いなら考えないことだ」" },
+    desc: { th: "คุณมีจิตใจที่รู้จักปล่อยวาง ยอมรับความไม่แน่นอนของชีวิตด้วยความสงบและความเข้าใจ", ko: "당신은 내려놓을 줄 아는 마음을 가졌으며, 삶의 불확실성을 의연하게 받아들입니다.", en: "You possess a graceful mindset of letting go, accepting life's uncertainties calmly.", ja: "あなたは手放す心を持っており、人生の不確実性を穏やかに受け入れます。" }
+  },
   c10: {
     img: "img-card/card10.jpg",
-    title: { th: "CARD 10: ฤดูหนาว", ko: "CARD 10: 겨울", en: "CARD 10: Winter", ja: "CARD 10: 冬" },
+    title: { th: "ฤดูหนาว", ko: "겨울", en: "Winter", ja: "冬" },
     quote: { th: "“แสงที่งดงามที่สุด คือแสงที่เปล่งออกมาจากภายในตัวเราเอง”", ko: "“가장 아름다운 빛은 우리 내면에서 나오는 빛이다”", en: "“The most beautiful light is the one radiating from within”", ja: "「最も美しい光は私たちの内面から放たれる光だ」" },
     desc: { th: "คุณค้นพบคุณค่าและความงดงามในตัวเอง ตระหนักว่าคุณคือแสงสว่างที่อบอุ่นและมีชีวิตชีวา", ko: "당신은 자신 내부의 가치와 아름다움을 아는 사람이며, 스스로 빛나는 귀한 존재입니다.", en: "You recognize your intrinsic value and beauty, shining brightly as your authentic self.", ja: "あなたは自分の内面の価値と美しさを知る人であり、自ら輝く貴い存在です。" }
   }
@@ -355,6 +360,11 @@ function renderStep() {
   document.getElementById('seasonTitle').innerText = step.season[currentLang];
   document.getElementById('storyText').innerText = step.story[currentLang];
   document.getElementById('questionText').innerText = step.question[currentLang];
+  // แสดงรูปภาพ
+  document.getElementById('storyImageContainer').innerHTML = `<img src='${step.image}' alt='ภาพประกอบ' style='width:100%; max-height:220px; object-fit:cover; border-radius:15px; margin-bottom: 15px;'>`;
+
+  // แสดงข้อความเนื้อเรื่องปกติ (ใช้ innerText ธรรมดาได้เลย เพราะไม่มีแท็ก HTML ปนแล้ว)
+  document.getElementById('storyText').innerText = step.story[currentLang];
 
   // Auto Theme Switch according to Story Season
   if (stepIndex === 0) changeTheme('winter', false);

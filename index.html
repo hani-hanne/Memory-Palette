@@ -47,21 +47,36 @@
       <div class="season-float leaf">🍂</div>
       <div class="season-float snow">❄️</div>
 
-      <!-- นาฬิกากลาง -->
-      <div class="clock-world">
-        <div class="clock-ring ring-1"></div>
-        <div class="clock-ring ring-2"></div>
-        <div class="clock-face">
-          <span class="clock-number n12">12</span>
-          <span class="clock-number n3">3</span>
-          <span class="clock-number n6">6</span>
-          <span class="clock-number n9">9</span>
-          <div class="clock-hand hour-hand"></div>
-          <div class="clock-hand minute-hand"></div>
-          <div class="clock-center"></div>
-        </div>
-      </div>
+        <svg xmlns="http://w3.org" viewBox="0 0 400 400" width="40%" height="100%">
+        <!-- พื้นหลังจานสี -->
+        <path d="M 230 100 
+                C 310 100, 360 170, 330 250 
+                C 300 330, 210 370, 160 310 
+                C 120 260, 140 200, 120 180
+                C 100 160, 160 100, 230 100 Z" 
+                fill="#F3E1D3" />
 
+        <!-- วงกลมสีต่างๆ บนจานสี -->
+        <circle cx="215" cy="150" r="14" fill="#E62117" /> <!-- สีแดง -->
+        <circle cx="255" cy="190" r="14" fill="#009A61" /> <!-- สีเขียว -->
+        <circle cx="255" cy="250" r="14" fill="#0071C1" /> <!-- สีน้ำเงิน -->
+        <circle cx="215" cy="290" r="14" fill="#FFAA00" /> <!-- สีเหลือง -->
+
+        <!-- พู่กันทาสี -->
+        <g id="paint-brush">
+            <!-- ด้ามพู่กันไม้ -->
+            <path d="M 195 105 L 115 315 C 113 320, 110 320, 111 315 L 175 110 Z" fill="#D67B27" />
+            
+            <!-- ข้อต่อโลหะคอพู่กัน -->
+            <path d="M 175 110 L 195 105 L 202 85 L 182 90 Z" fill="#E49B55" />
+            
+            <!-- ขนพู่กันสีเข้ม -->
+            <path d="M 182 90 
+                    C 180 70, 195 40, 205 40 
+                    C 215 55, 210 75, 202 85 Z" 
+                fill="#232B38" />
+        </g>
+        </svg>
       <div class="cover-small-title" id="coverSmallTitle">
         The World of Time and Colors of Seasons
       </div>
@@ -189,7 +204,8 @@
     <!-- 4. หน้าแสดงเนื้อเรื่อง (Story Page) -->
     <div id="storyPage" class="page-view">
       <div class="season-badge" id="seasonTitle">บทนำ: โลกของเวลา</div>
-      <div class="quote-icon">“</div>
+      <div class="quote-icon"></div>
+      <div id="storyImageContainer"></div>
       <div class="story-text" id="storyText"></div>
       <button class="btn-next" onclick="goToQuestion()">
         <span id="readQuestionText">อ่านคำถาม</span> →
@@ -221,7 +237,9 @@
         <p style="color: var(--accent); margin: 0; font-weight: 500;">PROJECT NAME</p>
         <p style="margin: 0 0 10px 0;">Memory Palette</p>
         <p style="color: var(--accent); margin: 0; font-weight: 500;">CREATED BY</p>
-        <p style="margin: 0 0 10px 0;">Niratcha / Studio</p>
+        <p style="margin: 0 0 10px 0;">HARUENCHAK NIRATCHA </p>
+        <p style="color: var(--accent); margin: 0; font-weight: 500;">THANKS</p>
+        <p style="margin: 0;" id="specialThanksText">Mona jung</p>
         <p style="color: var(--accent); margin: 0; font-weight: 500;">SPECIAL THANKS</p>
         <p style="margin: 0;" id="specialThanksText">ผู้เล่นทุกคนที่ร่วมเล่นแบบทดสอบ ✨</p>
       </div>
